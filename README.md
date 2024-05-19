@@ -6,6 +6,7 @@ This repository contains the code developed for my Master's Thesis, which focuse
 
 ## **Features**
 
+
 - **Extract Road Data**: The code extracts road data by processing latitude and longitude GPS traces from a vehicle.
 - **Generate DOC Model**: It returns a deterministic operating cycle (DOC) model in CSV format, which includes attributes such as elevation, slope, speed limit, and more.
 - **Distance Calculation**: Implements accurate distance calculation using Haversine and Vincenty formulas.
