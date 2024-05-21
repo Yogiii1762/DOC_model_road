@@ -30,6 +30,7 @@ Ensure you have the following dependencies installed:
 - geopy
 - json
 - Matplotlib
+
 Also look out for other dependencies if you dont have them by default.
 
 You can install the required packages using pip:
@@ -59,7 +60,26 @@ xn,yn
 - **Distance Calculation**: It calculates the distance between consecutive GPS points using Haversine and Vincenty formulas.
 - **Road Data Extraction**: It uses HERE Maps API to extract road attributes such as speed limit, slope, and curvature based on the GPS traces.
 - **DOC Model Generation**: The extracted data is compiled into a deterministic operating cycle (DOC) model in CSV format.
+
+## **DOC File Explanation**
+| Attribute | Description |
+| --- | --- |
+| Distance (m) | Accurate Distance by Calculation (Geodesic with Inclination as of now). The distance is in SI unit meters and cumulative. |
+| Latitudes (degree) | High precision latitude coordinates [10^-7 degree WGS84] along the link. |
+| Longitudes (degree) | High precision longitude coordinates [10^-7 degree WGS84] along the link. |
+| Elevation (m) | High precision coordinate heights [m above WGS84 ellipsoid] along the link. |
+| Gradient (degree) | Vertical road direction [10^-3 degree] at coordinate points along the link no gradient or missing Values will be represented as 0. |
+| Curvatures (m) | Curvature (= 1 / radius) [10^-6 1/meter] at coordinate points along the link, missing values or no curvature will be represented as 0. |
+| Speed Limits (m/s) | Speed limits when driving on that link, missing speed limit values are adjusted by comparing the adjacent speed limit values form links and free-flow speed of that link. |
+| Free Flow Speeds (m/s) | A static average travel speed value for the link in m/s. |
+| Traffic Signal, Stop Sign, Yield Sign(giveway),Pedestrian Crossing Sign (Binary) | Binary Values represent whether the sign is present in the corresponding link. |
+| Wind Direction (degree) | Direction in Degrees |
+| Wind Velocity (m/s) | Wind velocity in m/s. Nullable |
+
 ## **Applications**
 - **Residual Range Estimation**: The DOC model can be used to estimate the remaining travel distance with the available energy in the battery or fuel.
 - **Energy Consumption Analysis**: Analyzes the energy consumed by the vehicle based on accurate distance estimation and road conditions.
 - **Simulation and Testing**: Provides detailed road conditions and vehicle dynamics for simulation and testing purposes.
+
+## **Further Works**
+Separate programs just for distance calculation and creation of DOC files with json file input will be uploaded soon! 
