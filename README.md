@@ -56,6 +56,8 @@ x1, y1
 x2,y2
 xn,yn
 ```
+Refer to sample_input.txt for the reference. 
+
 ## **Methodology**
 - **Data Collection**: The script collects GPS traces (latitude, longitude, and optionally elevation) from a CSV file.
 - **Distance Calculation**: It calculates the distance between consecutive GPS points using Haversine and Vincenty formulas.
