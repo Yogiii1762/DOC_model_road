@@ -31,12 +31,13 @@ Ensure you have the following dependencies installed:
 - json
 - Matplotlib
 
-Also look out for other dependencies if you dont have them by default.
+Also look out for other dependencies if you dont have them by default or you can use the requirements.txt file in the repository 
 
 You can install the required packages using pip:
 
 ```bash
-pip install pandas requests numpy geopy json matplotlib
+pip install -r requirements.txt
+
 ```
 
 ## **USAGE**
