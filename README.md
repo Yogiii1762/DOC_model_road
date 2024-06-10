@@ -72,6 +72,7 @@ Refer to sample_input.txt for the reference.
 | Longitudes (degree) | High precision longitude coordinates [10^-7 degree WGS84] along the link. |
 | Elevation (m) | High precision coordinate heights [m above WGS84 ellipsoid] along the link. |
 | Gradient (degree) | Vertical road direction [10^-3 degree] at coordinate points along the link no gradient or missing Values will be represented as 0. |
+| Headings (degree| Horizontal road heading [10^-3 degree] at coordinate points along the link or missing Values will be represented as 0.|
 | Curvatures (m) | Curvature (= 1 / radius) [10^-6 1/meter] at coordinate points along the link, missing values or no curvature will be represented as 0. |
 | Speed Limits (m/s) | Speed limits when driving on that link, missing speed limit values are adjusted by comparing the adjacent speed limit values form links and free-flow speed of that link. |
 | Free Flow Speeds (m/s) | A static average travel speed value for the link in m/s. |
